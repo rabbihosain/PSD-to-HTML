@@ -1,0 +1,533 @@
+/*----------------Basic Setup-----------*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Titillium Web', sans-serif;
+	text-rendering: optimizeLegibility;
+	line-height: 1.3;
+	font-size: 1.6rem;
+}
+html{
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+ul li{
+	list-style: none;
+}
+h1{
+	font-size: 4.2rem;
+	color: #fff;
+}
+:focus{
+	outline: 0;
+}
+
+/*----------------Reuseable Component-----------*/
+.row{
+	max-width: 114rem;
+	margin: 0 auto;
+}
+.btn:link,
+.btn:visited,
+.btn{
+	background: #333;
+	border-bottom: 0.3rem solid #000;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 1.5rem 6rem;
+	border-radius: .3rem;
+	display: inline-block;
+	margin-top: 4rem;
+	font-size: 1.6rem;
+}
+section{
+	padding: 8rem 0;
+}
+h2{
+	font-size: 4rem;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	font-weight: 600;
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+h2::after{
+	content: "";
+	display: block;
+	height: .4rem;
+	background: #13A58C;
+	width: 8.5rem;
+	margin: auto;
+	margin-top: 2rem;
+}
+h3{
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+h4{
+	font-size: 1.8rem;
+	font-weight: 400;text-transform: uppercase;
+	margin-top: 2.5rem;
+}
+.box{
+	padding: 1%;
+}
+.box p{
+	font-size: 1.6rem;
+	font-weight: 300;
+	margin-top: 2rem;
+}
+.little-description{
+	font-size: 1.8rem;
+	width: 60%;
+	margin:0 20%;
+	line-height: 3rem;
+}
+/*----------------Header -----------*/
+header{
+	background:linear-gradient(rgba(135,80,156,0.9),rgba(135,80,156,0.9)), url(img/kobu-agency-7okkFhxrxNw-unsplash.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 86vh;
+	position: relative;
+}
+.hero-text-box{
+	width: 114rem;
+}
+.logo{
+	height: 3.5rem;
+	width: auto;
+	margin-top: 3.5rem;
+	float: left;
+}
+/*-----------------------main navigation------------------------------*/
+.main-nav{
+	float: right;
+	margin-top: 4rem;
+}
+.main-nav li{
+	display: inline-block;
+	margin-left: 1rem;
+}
+.main-nav li:first-child{
+	margin-left: 0;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: transparent;
+	padding: .6rem 1rem;
+	border-radius: 3px;
+	display: inline-block;
+	font-size: 1.6rem;
+	transition: .3s;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+	background: #643A79;
+}
+.main-nave li.active a{
+	background: #643A79;
+}
+/*----------------- Stiiky Menu-----------------------*/
+.sticky{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(135, 80, 156, 0.9);
+	padding: 1rem 0;
+	box-shadow: 0 0.2rem 0.5rem rgba(255,255, 255, 0.9);
+	z-index: 1;
+}
+.sticky .logo{
+	margin-top: 0;
+}
+.sticky .main-nav{
+	margin-top: .2rem;
+}
+
+.hero-text-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	width: 100%;
+}
+.btn-hero:link,
+.btn-hero:visited{
+	background: #EB7D4B;
+	border-color: #C86A40;
+}
+.mobile-menu span{
+	color: #fff;
+	font-size: 4rem;
+	float: right;
+	margin-top: 2rem;
+	display: none;
+}
+.mobile-menu span:hover{
+	cursor: pointer;
+}
+.overlay{
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 2;
+	overflow-x: hidden;
+	transition: 0.5s;
+	width: 0;
+}
+.overlay a{
+	text-decoration: none;
+	color: #999;
+}
+.overlay-content{
+	position: relative;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+}
+.overlay-content a{
+	display: block;
+	text-decoration: none;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	color: #999;
+	padding: 1rem 1rem;
+}
+.overlay-content a:hover{
+	color: #fff;
+}
+.overlay .closebtn{
+	position: absolute;
+	top: 2rem;
+	right: 4.5rem;
+	font-size: 5rem;
+}
+.sticky .mobile-menu span{
+	margin-top: 0;
+}
+/*------------------------------Services---------------------------*/
+.services-section{
+	color: #fff;
+	text-align: center;
+	background:linear-gradient(rgba(23,194,164,0.9),rgba(23,194,164,0.9)), url(img/tyler-franta-iusJ25iYu1c-unsplash.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+}
+
+.services-section img{
+	height: 12rem;
+	margin-top: 4.5rem;
+	margin-bottom: 3.5rem;
+}
+
+/*----------------------------Team------------------------------------*/
+.team-section{
+	background: linear-gradient(rgba(231,241,248,0.9),rgba(231,241,248,0.9)), url(img/john-schnobrich-FlPc9_VocJ4-unsplash.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+}
+.team-section h2{
+	color: #3c4761;
+}
+.team-section h2::after{
+	background: #c8d9e5;
+}
+.team-member{
+	margin-top: 4.5rem;
+	margin-bottom: 3.5rem;
+	height: 20rem;
+	width: 20rem;
+	border-radius: 50%;
+}
+.team-section h3{
+	color: #27283d;
+}
+.team-section span{
+	color: #30bae7;
+	font-size: 1.6rem;
+	text-transform: capitalize;
+	margin-top: .5rem;
+	display: inline-block;
+}
+.team-section p{
+	color: #535E75;
+}
+.social-link{
+	margin-top: 4.5rem;
+}
+.social-link ul li{
+	display: inline-block;
+	margin: .5rem;
+}
+.social-link ul li a:link{
+	color: #fff !important;
+}
+.social-link ul li a i{
+	color: #fff;
+}
+.social-link ul li a:link i::before{
+	background: #BDD1DF;
+	width: 2rem;
+	height: 2rem;
+	display: inline-block;
+	font-size: 2rem;
+	border-radius: 50%;
+	padding: 1rem;
+	transition: .5s;
+}
+
+.social-link ul li a:hover i::before{
+	background: #393939;
+	transform: rotate(360deg);
+}
+/*--------------------------Skill---------------------------------*/
+.skill-section{
+	text-align: center;
+	background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)), url(img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.skill-section h2,
+.skill-section h3{
+	color: #3C4761;
+}
+.skill-section h2::after{
+	background: #DFE8ED;
+}
+.skill-section  .box{
+	margin-top: 4.5rem;
+}
+svg.radial-progress circle{
+	stroke-width:5;
+}
+svg.radial-progress text{
+	fill:#393939;
+	font-size: 1.5rem;
+}
+svg.web-design circle{
+	stroke: #30BAE7;
+}
+svg.html-css circle{
+	stroke: #15C7A8;
+}
+svg.graphics-design circle{
+	stroke: #D74680;
+}
+svg.ui-ux circle{
+	stroke: #EB7D4B;
+}
+/*---------------------------------Portfolio--------------------------------------*/
+.portfolio-section{
+	background:linear-gradient(rgba(255,221,153,0.9),rgba(255,221,153,0.9)), url(img/adventure-alps-background-547114.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	text-align: center;
+}
+.portfolio-section h2{
+	color: #3C4761;
+}
+.portfolio-section h2::after{
+	background: #E5C37F;
+}
+.portfolio-filter{
+	margin: 4.5rem 0;
+}
+.portfolio-section button{
+	background: #EBC985;
+	font-size:1.8rem;
+	padding: 1rem 2rem;
+	border: 0;
+	border-radius: .5rem;
+	text-transform: uppercase;
+	color: #3C4761;
+	margin: .5rem;
+	transition: .4s;
+}
+
+.portfolio-section button:hover{
+	cursor: pointer;
+	box-shadow: inset 0 0.3rem 0.3rem rgba(68,71,97,0.5);
+}
+.portfolio-img{
+	width: 100%;
+	height: auto;
+}
+.portfolio-section .col:nth-child(3) {
+	margin-left: 0;
+}
+.portfolio-section .btn-load-more{
+	background: #17C2A4;
+}
+.portfolio-section .mixitup-control-active{
+	background: #fff;
+}
+
+/*---------------Testimonial------------------------------------*/
+.testimonial{
+	background:linear-gradient(rgba(215,70,128,0.9),rgba(215,70,128,0.9)), url(img/antique-backdrop-background-129731.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.testimonial .little-description{
+	text-align: center;
+	color: #fff;
+}
+.testimonial .col:nth-child(3) {
+	margin-left: 0;
+}
+.testimonial .col:nth-child(1),
+.testimonial .col:nth-child(2) {
+	margin-top: 4rem;
+}
+.client-photo {
+	width: 10rem;
+	float: left;
+}
+.client-photo img{
+	height: 8rem;
+	border-radius: 50%;
+	margin-bottom: 3rem;
+}
+.client-review{
+	width: 35rem;
+	float: left;
+}
+.client-review p{
+	font-size: 2.1rem;
+	font-style: italic;
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+.client-review .role{
+	color: #ffdd99;
+}
+/*---------------------------Contact-----------------------------------------*/
+.contact{
+	background:linear-gradient(rgba(60, 84, 153, 0.9),rgba(60, 84, 153, 0.9)), url(img/alps-background-calm-1227520.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	text-align: center;
+}
+.contact h2::after{
+	background: #273a71;
+}
+.contact .little-description{
+	color: #fff;
+}
+.contact form {
+	margin-top: 5rem;
+	width: 70%;
+	margin-left: 15%;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+	background: #273a71;
+	border: .1rem solid #273a71;
+	width: 100%;
+	padding: 1.5rem;
+	border-radius: .5rem;
+	font-size: 1.8rem;
+	color: #fff;
+	margin: .5rem 0;
+}
+.contact form ::placeholder{
+	color: #fff;
+	opacity: 0.7;
+}
+.btn-submit{
+	border: 0;
+	background: #30BAE7;
+	border-bottom: .3rem solid #299ec5;
+}
+.btn-submit:hover{
+	cursor: pointer;
+}
+
+/*-----------------------Footer------------------------------------*/
+.footer {
+	background:#334B8E;
+	padding: 3rem 0;
+	text-align: center;
+	border: .1rem solid rgba(255,255,255,.2);
+}
+.footer li{
+	display: inline-block;
+	margin: 0 2rem;
+}
+.footer li a{
+	color: #fff;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 2.4rem;
+}
+.footer li:hover a{
+	color: #30BAE7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
